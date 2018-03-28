@@ -1,0 +1,8 @@
+{
+    "require": {
+        "slim/slim": "^3.8",
+        "slim/twig-view": "^2.2",
+        "joshcam/mysqli-database-class": "^2.7",
+        "google/apiclient": "^2.0"
+    }
+}

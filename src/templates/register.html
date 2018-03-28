@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        body {
+            background-color: #eee;
+        }
+        
+        *[role="form"] {
+            max-width: 530px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 0.3em;
+        }
+        
+        *[role="form"] h2 {
+            margin-left: 2em;
+            margin-bottom: 1em;
+        }
+        
+        .btn-file {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: inherit;
+            display: block;
+        }
+        
+        #img-upload {
+            width: 100%;
+        }
+        
+        .main-content {
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container main-content">
+        <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#Freelancer" aria-controls="Freelancer" role="tab" data-toggle="tab">ฟรีแลนซ์</a>
+                </li>
+                <li role="presentation">
+                    <a href="#company" aria-controls="company" role="tab" data-toggle="tab">บริษัท</a>
+
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="Freelancer">
+
+                    <form action="" method="POST" class="form-horizontal" role="form">
+                        <h2>การสมัครสมาชิกของฟรีแลนซ์</h2>
+                        <div class="form-group">
+                            <label for="firstName" class="col-md-3 control-label">ชื่อจริง</label>
+                            <div class="col-md-9">
+                                <input type="text" id="firstName" placeholder="ชื่อจริง" class="form-control" autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="col-md-3 control-label">นามสกุล</label>
+                            <div class="col-md-9">
+                                <input type="text" id="lastName" placeholder="นามสกุล" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 control-label">อีเมล</label>
+                            <div class="col-md-9">
+                                <input type="email" id="email" placeholder="อีเมล" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">รหัสผ่าน</label>
+                            <div class="col-md-9">
+                                <input type="password" id="password" placeholder="รหัสผ่าน" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthDate" class="col-md-3 control-label">วันเกิด</label>
+                            <div class="col-md-9">
+                                <input type="date" id="birthDate" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">เพศ</label>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="radio-inline"><input type="radio" id="femaleRadio" value="Female">หญิง</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="radio-inline"><input type="radio" id="maleRadio" value="Male">ชาย</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group"><label class="control-label col-md-3">อัพโหลดรูปภาพ</label>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                                            <span class="btn btn-default btn-file">Browse… <input type="file" id="imgInp"></span>
+                                    </span>
+                                    <input type="text" class="form-control" readonly>
+                                </div>
+                                <img id='img-upload' />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="skill" class="col-md-3 control-label">ทักษะ</label>
+                            <div class="col-md-5">
+                                <select id="skill" class="form-control">
+                                                            <option value="1">XML</option>
+                                                            <option value="2">Obj.C</option>
+                                                            <option value="3">C++</option>
+                                                            <option value="4">C#</option>
+                                                            <option value="5">Python</option>
+                                                            <option value="6">Java</option>
+                                                            <option value="7">SQL</option>
+                                                            <option value="8">HTML</option>
+                                                        </select>
+                            </div>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label for="pastex">ประสบการณ์ที่ผ่านมา</label>
+                                <textarea class="form-control" rows="5" id="pastex"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label for="lang">ภาษาที่สามารถใช้ในการสื่อสาร</label>
+                                <textarea class="form-control" rows="5" id="lang"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label for="Jobpre">งานที่ต้องการทำ</label>
+                                <textarea class="form-control" rows="5" id="Jobpre"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox">I accept <a href="#">terms</a>
+                            </label>
+                            </div>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <div class="col-md-9 col-md-offset-3">
+                                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /form -->
+                </div>
+                <div role="tabpanel" class="tab-pane" id="company">
+                    <div class="tab-content">
+                        <form class="form-horizontal" role="form">
+                            <h2>การสมัครสมาชิกของบริษัท</h2>
+                            <div class="form-group">
+                                <label for="comName" class="col-sm-3 control-label">ชื่อบริษัท</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="comName" placeholder="ชื่อบริษัท" class="form-control" autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName" class="col-sm-3 control-label">ชื่อจริง (ผู้ติดต่อ)</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="firstName" placeholder="ชื่อจริง" class="form-control" autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="col-sm-3 control-label">นามสกุล (ผู้ติดต่อ)</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="lastName" placeholder="นามสกุล" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-3 control-label">อีเมล</label>
+                                <div class="col-sm-9">
+                                    <input type="email" id="email" placeholder="อีเมล" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-3 control-label">รหัสผ่าน</label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="password" placeholder="รหัสผ่าน" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-3">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox">I accept <a href="#">terms</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.form-group -->
+                            <div class="form-group">
+                                <div class="col-sm-9 col-sm-offset-3">
+                                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- /form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Tab panes -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
